@@ -1,0 +1,12 @@
+import React from "react";
+
+
+function Nav() {
+    return (
+        <nav className="navbar navbar-light bg-light">
+            <a className="navbar-brand" >Zac's Clicky Game</a>
+        </nav>
+    )
+}
+
+export default Nav;
