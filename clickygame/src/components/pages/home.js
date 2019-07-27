@@ -4,6 +4,7 @@ import Jumbo from "../jumbo";
 import Card from "../Card";
 import CardDeck from "../CardDeck";
 import characters from "../../characters.json";
+import Nav from "../nav";
 
 
 
@@ -12,13 +13,26 @@ class Main extends Component {
         rowOne: [],
         rowTwo: [],
         rowThree: [],
+        clicked: [],
+        guess: "",
         name: "",
-        clicked: "",
+        score: 0,
+        highScore: 0
     };
 
     componentDidMount() {
         this.createRow();
     };
+
+    resetGame = () => {
+        this.setState({
+            name: "",
+            score: 0,
+            clicked: []
+        });
+        this.createRow();
+    };
+
 
 
     createRow = () => {
@@ -44,25 +58,65 @@ class Main extends Component {
     };
 
     handleImputChange = event => {
-        this.createRow();
+        console.log("clicked");
+        const { name } = event.target;
+        let check = false
+        let newScore = this.state.score;
+
+        const alreadyClicked = this.state.clicked;
+        console.log(alreadyClicked);
+        console.log(name);
+        if (!alreadyClicked) {
+            check = false;
+        }
+        else {
+            for (let i = 0; i < alreadyClicked.length; i++) {
+                console.log(alreadyClicked[i])
+                if (alreadyClicked[i] == name) {
+                    check = true;
+                    console.log("check" + i);
+                }
+
+            }
+        };
+        console.log(check);
+
+        if (check === true) {
+            console.log("you lose");
+            this.setState({ guess: "true" });
+            const highScore = this.state.highScore;
+            if (highScore < newScore) {
+                this.setState({ highScore: newScore });
+            }
+            this.resetGame();
+        }
+        else {
+            this.state.clicked.push(name);
+            newScore++;
+            this.setState({ score: newScore, guess: "false" });
+            this.createRow();
+            console.log(this.state.score);
+        }
+
     }
 
     render() {
         return (
             <>
+                <Nav guess={this.state.guess} score={this.state.score} highScore={this.state.highScore} />
                 <Jumbo />
                 <Container>
                     <CardDeck>
                         {this.state.rowOne.map((character, val) =>
-                            <Card image={character.image} name={character.name} key={character.name} clicked={this.state.clicked} />)}
+                            <Card onClick={this.handleImputChange} image={character.image} name={character.name} key={character.name} />)}
                     </CardDeck>
                     <CardDeck>
                         {this.state.rowTwo.map((character, val) =>
-                            <Card onClick={this.handleImputChange} image={character.image} name={character.name} key={character.name} clicked={this.state.clicked} />)}
+                            <Card onClick={this.handleImputChange} image={character.image} name={character.name} key={character.name} />)}
                     </CardDeck>
                     <CardDeck>
                         {this.state.rowThree.map((character, val) =>
-                            <Card image={character.image} name={character.name} key={character.name} clicked={this.state.clicked} />)}
+                            <Card onClick={this.handleImputChange} image={character.image} name={character.name} key={character.name} />)}
                     </CardDeck>
                 </Container>
             </>
