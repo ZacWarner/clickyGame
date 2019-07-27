@@ -1,6 +1,114 @@
 [
     {
-        "image": ,
-        "name":
+        "image": "./images/Ackabar.png",
+        "name": "Admiral Ackabar"
     },
+    {
+        "image": "./images/BB8.png",
+        "name": "BB8"
+    },
+    {
+        "image": "./images/BobaFett.png",
+        "name": "Boba Fett"
+    },
+    {
+        "image": "./images/C3po.png",
+        "name": "C3P0"
+    },
+    {
+        "image": "./images/Chewbaca.png",
+        "name": "Chewbacca"
+    },
+    {
+        "image": "./images/emporer.png",
+        "name": "Emporer Palpatine"
+    },
+    {
+        "image": "./images/Finn.png",
+        "name": "Finn"
+    },
+    {
+        "image": "./images/Greedo.png",
+        "name": "Greedo"
+    },
+    {
+        "image": "./images/HanSolo.png",
+        "name": "Han Solo"
+    },
+    {
+        "image": "./images/Holdo.png",
+        "name": "Admiral Holdo"
+    },
+    {
+        "image": "./images/Hux.png",
+        "name": "Comander Hux"
+    },
+    {
+        "image": "./images/Jaba.png",
+        "name": "Jaba The Hutt"
+    },
+    {
+        "image": "./images/JediLuke.png",
+        "name": "Jedi Luke"
+    },
+    {
+        "image": "./images/Kylo.png",
+        "name": "Kylo Ren"
+    },
+    {
+        "image": "./images/Lando.png",
+        "name": "Lando Calrisian"
+    },
+    {
+        "image": "./images/Lea.png",
+        "name": "Princess Lea"
+    },
+    {
+        "image": "./images/MonMothma.png",
+        "name": "Mon Mothma"
+    },
+    {
+        "image": "./images/ObiWanKenobi.png",
+        "name": "Obi Wan Kenobi"
+    },
+    {
+        "image": "./images/OldLuke.png",
+        "name": "Old Luke"
+    },
+    {
+        "image": "./images/Phasma.png",
+        "name": "Captain Phasma"
+    },
+    {
+        "image": "./images/Poe.png",
+        "name": "Poe Daermon"
+    },
+    {
+        "image": "./images/Porg.png",
+        "name": "Porg"
+    },
+    {
+        "image": "./images/R2D2.png",
+        "name": "R2D2"
+    },
+    {
+        "image": "./images/Rey.png",
+        "name": "Rey"
+    },
+    {
+        "image": "./images/Tarkin.png",
+        "name": "Admiral Tarkin"
+    },
+    {
+        "image": "./images/Vader.png",
+        "name": "Darth Vader"
+    },
+    {
+        "image": "./images/Wicket.png",
+        "name": "Wicket"
+    },
+    {
+        "image": "./images/Yoda.png",
+        "name": "Yoda"
+    }
 ]
