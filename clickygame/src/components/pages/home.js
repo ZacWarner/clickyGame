@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Container from '../container';
-import Jumbo from "../jumbo";
+import Jumbo from "../Jumbo";
 import Card from "../Card";
 import CardDeck from "../CardDeck";
 import characters from "../../characters.json";
@@ -59,9 +59,10 @@ class Main extends Component {
 
     handleImputChange = event => {
         console.log("clicked");
-        const { name } = event.target;
+        const name = JSON.stringify(event.target.name);
         let check = false
         let newScore = this.state.score;
+
 
         const alreadyClicked = this.state.clicked;
         console.log(alreadyClicked);
@@ -72,7 +73,7 @@ class Main extends Component {
         else {
             for (let i = 0; i < alreadyClicked.length; i++) {
                 console.log(alreadyClicked[i])
-                if (alreadyClicked[i] == name) {
+                if (alreadyClicked[i] === name) {
                     check = true;
                     console.log("check" + i);
                 }
