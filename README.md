@@ -2,7 +2,7 @@
 Click a character to earn points, but be careful if you click the same character twice you loose!
 
 ### Deployed Link
-
+https://zacwarner.github.io/clickyGame/
 
 ### Created with
 * React
